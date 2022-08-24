@@ -1,8 +1,7 @@
-package com.practice;
-import java.io.*;
+package com.practice.sortingalgorithms;
 import java.util.*;
 
-public class Main {
+public class MergeSort {
 
     public static void main(String[] args) {
         int[] nums = new int[]{-1,8,2,0,7,3,18,9,11};
@@ -24,10 +23,7 @@ public class Main {
 
            mergeSort(leftArr);
            mergeSort(rightArr);
-
-
            merge(k, leftArr, rightArr);
-
            return k;
          }
 
