@@ -101,10 +101,12 @@ class StudentTracker {
 
      List<Student> studentList = new ArrayList<>();
      for(Map.Entry<Integer, Student> i: ssnMap.entrySet()){
-         studentList.add(i.getValue());
+         studentList.add(i.getValue() );
      }
 
-     
+     Collections.sort();
+
+
 
     }
 
