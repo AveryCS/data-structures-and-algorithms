@@ -20,7 +20,7 @@ class Solution {
         Student ashley= new Student("Ashley",29,87, 4);
         Student milly = new Student("Milly",54,17,3.2);
         Student jordan = new Student("Jordan", 21,23, 1);
-        Student rudy=  new Student("Rudy",45, 81, 2))
+        Student rudy=  new Student("Rudy",45, 81, 2);
 
 
         // System.out.println("Ashley's age is "+  ashley.getAge());
@@ -104,7 +104,7 @@ class StudentTracker {
          studentList.add(i.getValue() );
      }
 
-     Collections.sort();
+//     Collections.sort(studentList);
 
 
 
