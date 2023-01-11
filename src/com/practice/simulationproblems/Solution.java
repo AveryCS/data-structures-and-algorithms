@@ -2,7 +2,7 @@ package com.practice.simulationproblems;
 /*
  * Click `Run` to execute the snippet below!
  */
-
+import java.util.List;
 import java.io.*;
 import java.util.*;
 
@@ -93,22 +93,22 @@ class StudentTracker {
         }
         return allGrades / entries;
     }
-    public ArrayList<Student> getStudentsInOrderOfGPA(HashMap<Integer,Student> ssnMap){
-        //What I need to be able to retrieve: Student, along with their GPA
-        //If i pass in the HashMap, I could iterate through it and get the student object.
-        //How can it know what an Entry data type is? Is that built in?
-        Set<Map.Entry<Integer,Student>> entrySet= ssnMap.entrySet();
-
-     List<Student> studentList = new ArrayList<>();
-     for(Map.Entry<Integer, Student> i: ssnMap.entrySet()){
-         studentList.add(i.getValue() );
-     }
-
-//     Collections.sort(studentList);
-
-
-
-    }
+//    public ArrayList<Student> getStudentsInOrderOfGPA(HashMap<Integer,Student> ssnMap){
+//        //What I need to be able to retrieve: Student, along with their GPA
+//        //If i pass in the HashMap, I could iterate through it and get the student object.
+//        //How can it know what an Entry data type is? Is that built in?
+//        Set<Map.Entry<Integer,Student>> entrySet= ssnMap.entrySet();
+//
+//     List<Student> studentList = new ArrayList<>();
+//     for(Map.Entry<Integer, Student> i: ssnMap.entrySet()){
+//         studentList.add(i.getValue() );
+//     }
+//
+//    return  Collections.sort(studentList);
+//
+//
+//
+//    }
 
 
 }
