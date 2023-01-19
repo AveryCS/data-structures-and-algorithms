@@ -10,13 +10,15 @@ import java.util.*;
 public class RemoveVowelsFromAString {
     public String removeVowels(String s) {
         char [] arr = s.toCharArray();
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for( char c : arr){
             if( ! isVowel(c)){
-                result += String.valueOf(c);
+                result.append (c);
             }
         }
-        return result;
+
+        return String.valueOf(result);
+
     }
     public static boolean isVowel(char c){
         return c =='a' || c =='e'|| c == 'i'|| c == 'o' || c == 'u';
