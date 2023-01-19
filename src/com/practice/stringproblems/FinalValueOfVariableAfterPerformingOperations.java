@@ -1,6 +1,4 @@
 package com.practice.stringproblems;
-
-
 import java.util.*;
 /**Problem statement:
  There is a programming language with only four operations and one variable X:
