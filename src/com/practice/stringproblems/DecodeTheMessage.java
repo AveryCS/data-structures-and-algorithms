@@ -21,25 +21,28 @@ import java.util.*;
 public class DecodeTheMessage {
     public String decodeMessage(String key, String message) {
 
-        Map<Character, Character> map = new HashMap<>();
-        char alphabet ='a';
-
-        for( int i=0; i< key.length();i++){
-            if(key.charAt(i) != ' ' && !map.containsKey(key.charAt(i))){
-                map.put(key.charAt(i),alphabet);
-                alphabet++;
-            }
-        }
+        Map < Character, Character > map = new HashMap < > ();
+        putInMap(map, key);
         StringBuilder result = new StringBuilder();
 
-        for( int j= 0; j< message.length(); j++){
+        for (int j = 0; j < message.length(); j++) {
             char check = message.charAt(j);
-            if( check ==  ' '){
+            if (check == ' ') {
                 result.append(" ");
-            }else{
+            } else {
                 result.append(map.get(check));
             }
         }
         return result.toString();
+    }
+    public static void putInMap(Map < Character, Character > map, String key) {
+        char alphabet = 'a';
+        for (int i = 0; i < key.length(); i++) {
+            if (key.charAt(i) != ' ' && !map.containsKey(key.charAt(i))) {
+                map.put(key.charAt(i), alphabet);
+                alphabet++;
+            }
+        }
+
     }
 }
