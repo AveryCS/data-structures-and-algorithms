@@ -24,8 +24,9 @@ package com.practice.slidingwindowproblems;
 public class FindTheKBeautyOfANumber {
     public int divisorSubstrings(int num, int k) {
         int count = 0;
+        String number = Integer.toString(num);
         for (int i = 0; i <= String.valueOf(num).length() - k; i++) {
-            int check = returnInteger(i, num, k);
+            int check = returnInteger(number,i, num, k);
             if (check != 0 && num % check == 0) {
                 System.out.println(check);
                 count++;
@@ -34,14 +35,8 @@ public class FindTheKBeautyOfANumber {
         return count;
     }
 
-    public static int returnInteger(int index, int num, int k) {
-        String number = Integer.toString(num);
-        StringBuilder result = new StringBuilder();
-        int i = index;
-        for (int j = 0; j < k; j++) {
-            result.append(number.charAt(i));
-            i++;
-        }
-        return Integer.valueOf(result.toString());
+    public static int returnInteger(String number, int index, int num, int k) {
+        return Integer.valueOf(number.substring(index, index+k));
     }
+
 }
