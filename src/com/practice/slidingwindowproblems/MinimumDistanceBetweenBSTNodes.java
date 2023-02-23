@@ -1,22 +1,25 @@
 package com.practice.slidingwindowproblems;
+
 import java.util.*;
-/**Problem statement:
- Given the root of a Binary Search Tree (BST), return the minimum difference between the values of any two different
- nodes in the tree.
 
- Input: root = [4,2,6,1,3]
- Output: 1
-
- Constraints:
-
- The number of nodes in the tree is in the range [2, 100].
- 0 <= Node.val <= 105
-
- Leetcode link: https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/
+/**
+ * Problem statement:
+ * Given the root of a Binary Search Tree (BST), return the minimum difference between the values of any two different
+ * nodes in the tree.
+ * <p>
+ * Input: root = [4,2,6,1,3]
+ * Output: 1
+ * <p>
+ * Constraints:
+ * <p>
+ * The number of nodes in the tree is in the range [2, 100].
+ * 0 <= Node.val <= 105
+ * <p>
+ * Leetcode link: https://leetcode.com/problems/minimum-distance-between-bst-nodes/description/
  **/
 public class MinimumDistanceBetweenBSTNodes {
     public int minDiffInBST(TreeNode root) {
-        List < Integer > list = new ArrayList < > ();
+        List<Integer> list = new ArrayList<>();
         createList(root, list);
 
         int temp = Math.abs(list.get(0) - list.get(1));
@@ -28,7 +31,7 @@ public class MinimumDistanceBetweenBSTNodes {
         return result;
     }
 
-    public static void createList(TreeNode root, List < Integer > list) {
+    public static void createList(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;
         }
@@ -36,5 +39,24 @@ public class MinimumDistanceBetweenBSTNodes {
         list.add(root.val);
         createList(root.right, list);
         return;
+    }
+}
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
