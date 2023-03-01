@@ -33,4 +33,22 @@ public class PowerOfTwo {
             n /= 2;
         }
     }
+    //For loop solution below:
+    public boolean isPowerOfTwoForLoop(int n) {
+         if (n == 1) {
+       return true;
+     }
+     for (int i = n; i > 0; i /= 2) {
+       System.out.println(i);
+       if (i % 2 != 0 && i != 1) {
+         return false;
+       }
+       if (i == 1) {
+         return true;
+       }
+     }
+     return false;
+
+    }
+
 }
