@@ -8,7 +8,7 @@ import java.util.*;
 public class BinarySearchRecursively {
     public static void main(String[] args) {
         int [] nums ={ -1,2,6,50,80,100,112};
-        int target = 113;
+        int target = 120;
         System.out.println(bSearch(nums, 0, nums.length, target));
     }
 
