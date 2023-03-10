@@ -2,8 +2,8 @@ package com.practice.miscellaneous;
 import java.util.*;
 public class IterativeBinarySearch {
     public static void main(String[] args) {
-        int [] nums = {1,8,11,13};
-        System.out.println(bSearch(nums,0,nums.length, 13));
+        int [] nums = {1,3,5,7};
+        System.out.println(bSearch(nums,0,nums.length, 3));
 
     }
     public static int bSearch( int[] nums, int begin, int end, int target){
