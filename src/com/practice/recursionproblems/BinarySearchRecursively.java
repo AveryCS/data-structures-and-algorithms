@@ -7,14 +7,14 @@ import java.util.*;
 
 public class BinarySearchRecursively {
     public static void main(String[] args) {
-        int [] nums ={ -1,2,6,50,80,100,112};
-        int target = 120;
+        int [] nums ={ -1,2,9,50};
+        int target = 55;
         System.out.println(bSearch(nums, 0, nums.length, target));
     }
 
     public static int bSearch(int[] nums, int begin, int end, int target) {
         int middle = (begin + end) / 2;
-        if (nums[middle] == target) {
+        if (middle < nums.length && nums[middle] == target) {
             return middle;
         } else if (middle == begin || middle == end) {
             return -1;
@@ -22,7 +22,7 @@ public class BinarySearchRecursively {
             begin = middle + 1;
             return bSearch(nums, begin, end, target);
         } else {
-            end = middle - 1;
+            end = middle ;
             return bSearch(nums, begin, end, target);
         }
     }
