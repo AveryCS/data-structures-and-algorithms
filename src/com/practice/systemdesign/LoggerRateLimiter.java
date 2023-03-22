@@ -12,7 +12,7 @@ import java.util.*;
  Logger() Initializes the logger object.
  bool shouldPrintMessage(int timestamp, string message) Returns true if the message should be printed in the
  given timestamp, otherwise returns false.
- 
+
  Leetcode link: https://leetcode.com/problems/logger-rate-limiter/description/
  **/
 
