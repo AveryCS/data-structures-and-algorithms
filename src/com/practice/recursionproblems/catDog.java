@@ -18,6 +18,7 @@ public class catDog {
         return findCount(str, 0) == 0;
 
     }
+
     public static int findCount(String str, int index) {
 
         if (index > str.length() - 3) {
@@ -34,4 +35,5 @@ public class catDog {
         } else {
             return findCount(str, index + 1);
         }
+    }
 }
