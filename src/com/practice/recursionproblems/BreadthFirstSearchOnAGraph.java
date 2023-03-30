@@ -1,3 +1,5 @@
+package com.practice.recursionproblems;
+
 import java.io.*;
 import java.util.*;
 
@@ -9,7 +11,7 @@ import java.util.*;
  *
  *
  **/
-package com.practice.recursionproblems;
+
 public class BreadthFirstSearchOnAGraph {
     public static void main(String[] args) {
 
