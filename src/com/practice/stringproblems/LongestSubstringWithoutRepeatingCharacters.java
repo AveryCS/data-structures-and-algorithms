@@ -47,7 +47,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 removeDuplicateLetterAndEverythingBeforeIt(set, letter);
                 set.add(letter);
             }
-            3
+
         }
         return result;
     }
