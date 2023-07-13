@@ -20,10 +20,9 @@ public class BinarySearchRecursively {
             return -1;
         } else if (nums[middle] < target) {
             begin = middle + 1;
-            return bSearch(nums, begin, end, target);
         } else {
             end = middle ;
-            return bSearch(nums, begin, end, target);
         }
+        return bSearch(nums, begin, end, target);
     }
 }
