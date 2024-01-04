@@ -19,10 +19,7 @@ public class SumUpTwoDArrayRecursively {
         int width= nums[0].length;
         int height = nums.length;
 
-        if(row>= height){
-            return 0;
-        }
-        if(col >= width){
+        if(row>= height || col >= width){
             return 0;
         }
         if(set.contains(List.of(row,col))){
